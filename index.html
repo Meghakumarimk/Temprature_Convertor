@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    
+  <title>Temperature Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <form onsubmit="changeTemp(); return false;">
+      <label>
+        <span style="font-size: 2rem">Input the Temprature you'd like to convert</span>
+        <i class="fa-solid fa-temperature-three-quarters fa-bounce fa-xl" style="margin-left: 6px;"></i>
+      </label>
+      <br />
+      <input type="text" name="temp" id="temp" onclick="clearValue();" placeholder="Enter temperature..." />
+      <div class="differentTemp">
+        <select name="temperatures1" id="temperatures1">
+          <option value="NAN" disabled selected>---Choose the final Unit---</option>
+          <option value="cel">&#176;Celsius</option>
+          <option value="fah">&#176;Fahrenheit</option>
+          <option value="kel">&nbsp;Kelvin</option>
+        </select>
+      </div>
+      <div class="subRe">
+        <input type="submit" value="CONVERT" class="button-29" style="font-size: 1.6rem" />
+      </div>
+      <div class="ans">
+        <div id="result"></div>
+        <div id="result2"></div>
+      </div>
+      <div id="warning"></div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
